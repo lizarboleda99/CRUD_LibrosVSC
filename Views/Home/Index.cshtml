@@ -1,0 +1,47 @@
+﻿@model List<Libro>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="text-align:center;">
+    <br />
+    <h1 class="bg-warning text-white" style="text-align: center; background-color: #fffc95;">Libreria Lizbeth</h1>
+    <a asp-action="Create" class="btn btn-secondary" style="text-align: center; background-color: #f1819a; border-color:#b35b7f;">Agregar un Libro</a>
+    <!--<a asp-action="Masive" class="btn btn-secondary" style="text-align: center; background-color: #a52f47; border-color: #a52f47; ">Agregar Libros Masivo</a>-->
+    <br />
+    <br />
+    <table class="table table-sm table-bordered">
+        <tr class="table-warning">
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Paginas</th>
+            <th>Editorial</th>
+            <th>Autor</th>
+            <th>Precio</th>
+            <th colspan="2"></th>
+        </tr>
+        @foreach (Libro l in Model)
+        {
+            <tr>
+                <td>@l.id</td>
+                <td>@l.nombre</td>
+                <td>@l.paginas</td>
+                <td>@l.editorial</td>
+                <td>@l.autor</td>
+                <td>@l.precio</td>
+                <td>
+                    <a class="btn btn-sm" asp-action="Update" asp-route-id="@l.id" style="background-color: #965595; border-color: #7a3e61; color:white;">
+                        Actualizar
+                    </a>
+                </td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@l.id" method="post">
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Borrar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
