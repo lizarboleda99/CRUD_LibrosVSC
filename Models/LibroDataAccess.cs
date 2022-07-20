@@ -6,7 +6,7 @@ namespace CRUD_LibrosVSC.Models
 {
     public class LibroDataAccess
     {
-        string connectionString = "Persist Security Info=False;Integrated Security=true;Initial Catalog=Libreria;Server=DESKTOP-SQNPVTG"  ;    
+        string connectionString = "server=bdnwmify9kzquih5jqrb-mysql.services.clever-cloud.com; port=3306; database=bdnwmify9kzquih5jqrb; user=ug5ijvylqe8n3wvj; password=tHuBMHWfww6ezoERed9K; Persist Security Info=False; Connect Timeout=300"   ;     
     
         //To View all Libros details      
         public IEnumerable<Libro> TraerLibros()    
