@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C-sharp\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {}
+    "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {}
   },
   "projects": {
-    "D:\\C-sharp\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {
+    "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C-sharp\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
+        "projectUniqueName": "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
         "projectName": "CRUD_LibrosVSC",
-        "projectPath": "D:\\C-sharp\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
+        "projectPath": "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
         "packagesPath": "C:\\Users\\Liz\\.nuget\\packages\\",
-        "outputPath": "D:\\C-sharp\\CRUD_LibrosVSC\\obj\\",
+        "outputPath": "d:\\GitHub\\CRUD_LibrosVSC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -49,9 +49,9 @@
               "target": "Package",
               "version": "[6.0.6, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

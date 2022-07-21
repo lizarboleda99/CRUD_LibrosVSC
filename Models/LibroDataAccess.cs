@@ -1,6 +1,6 @@
 using System;
 using System.Data;
-using Microsoft.Data.SqlClient;
+using MySqlConnector;
 
 namespace CRUD_LibrosVSC.Models
 {
@@ -13,13 +13,13 @@ namespace CRUD_LibrosVSC.Models
         {    
             List<Libro> lstLibro = new List<Libro>();    
     
-            using (SqlConnection con = new SqlConnection(connectionString))    
+            using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                SqlCommand cmd = new SqlCommand("spTodosLosLibros", con);    
+                MySqlCommand cmd = new MySqlCommand("spTodosLosLibros", con);    
                 cmd.CommandType = CommandType.StoredProcedure;    
     
                 con.Open();    
-                SqlDataReader rdr = cmd.ExecuteReader();    
+                MySqlDataReader rdr = cmd.ExecuteReader();    
     
                 while (rdr.Read())    
                 {    
@@ -42,9 +42,9 @@ namespace CRUD_LibrosVSC.Models
         //To Add new Libro record      
         public void AgregarLibro(Libro Libro)    
         {    
-            using (SqlConnection con = new SqlConnection(connectionString))    
+            using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                SqlCommand cmd = new SqlCommand("spAgregarLibro", con);    
+                MySqlCommand cmd = new MySqlCommand("spAgregarLibro", con);    
                 cmd.CommandType = CommandType.StoredProcedure;    
     
                 cmd.Parameters.AddWithValue("@nombre", Libro.nombre);    
@@ -62,9 +62,9 @@ namespace CRUD_LibrosVSC.Models
         //To Update the records of a particluar Libro    
         public void ActualizarLibro(Libro Libro)    
         {    
-            using (SqlConnection con = new SqlConnection(connectionString))    
+            using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                SqlCommand cmd = new SqlCommand("spActualizarLibro", con);    
+                MySqlCommand cmd = new MySqlCommand("spActualizarLibro", con);    
                 cmd.CommandType = CommandType.StoredProcedure;    
     
                 cmd.Parameters.AddWithValue("@id", Libro.id);    
@@ -85,13 +85,13 @@ namespace CRUD_LibrosVSC.Models
         {    
             Libro Libro = new Libro();    
     
-            using (SqlConnection con = new SqlConnection(connectionString))    
+            using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
                 string sqlQuery = "SELECT * FROM Libros WHERE id= " + id;    
-                SqlCommand cmd = new SqlCommand(sqlQuery, con);    
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, con);    
     
                 con.Open();    
-                SqlDataReader rdr = cmd.ExecuteReader();    
+                MySqlDataReader rdr = cmd.ExecuteReader();    
     
                 while (rdr.Read())    
                 {    
@@ -110,9 +110,9 @@ namespace CRUD_LibrosVSC.Models
         public void BorrarLibro(int? id)    
         {    
     
-            using (SqlConnection con = new SqlConnection(connectionString))    
+            using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                SqlCommand cmd = new SqlCommand("spBorrarLibro", con);    
+                MySqlCommand cmd = new MySqlCommand("spBorrarLibro", con);    
                 cmd.CommandType = CommandType.StoredProcedure;    
     
                 cmd.Parameters.AddWithValue("@id", id);    

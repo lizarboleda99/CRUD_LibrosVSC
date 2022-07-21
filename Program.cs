@@ -32,5 +32,5 @@ app.Run();
 var connectionString = builder.Configuration.GetConnectionString("DevConnection");
 
 builder.Services.AddDbContext<LibroContext>(options => 
-   options.UseSqlServer(connectionString));
+   options.UseMySql(connectionString,new MySqlServerVersion(new Version(8, 0, 11))));
 builder.Services.AddControllersWithViews();
