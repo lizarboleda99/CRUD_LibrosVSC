@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vRpM7dGurvw2i0g5huDx38jJRwN5wbc+p6iaqp3oTgk7JFqrShcVaCh4YXOOvOnYg2rwmmRG0Jk0MygjlWeZ6Q==",
+  "dgSpecHash": "dDowTqMFHbIRyBoD4PUkphED1PZpIMt0kYSIXu+FKitoa3RJESqvsywm7BwpRLyWueoYKF2dLgr1eBevAmm3JQ==",
   "success": true,
-  "projectFilePath": "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
+  "projectFilePath": "D:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liz\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
     "C:\\Users\\Liz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",

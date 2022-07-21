@@ -6,7 +6,7 @@ namespace CRUD_LibrosVSC.Models
 {
     public class LibroDataAccess
     {
-        string connectionString = "server=bdnwmify9kzquih5jqrb-mysql.services.clever-cloud.com; port=3306; database=bdnwmify9kzquih5jqrb; user=ug5ijvylqe8n3wvj; password=tHuBMHWfww6ezoERed9K; Persist Security Info=False; Connect Timeout=300"   ;     
+        string connectionString = "server=bdnwmify9kzquih5jqrb-mysql.services.clever-cloud.com; port=3306; database=bdnwmify9kzquih5jqrb; user=ug5ijvylqe8n3wvj; password=tHuBMHWfww6ezoERed9K; Persist Security Info=False; Connect Timeout=200";     
     
         //To View all Libros details      
         public IEnumerable<Libro> TraerLibros()    
@@ -64,15 +64,15 @@ namespace CRUD_LibrosVSC.Models
         {    
             using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                MySqlCommand cmd = new MySqlCommand("spActualizarLibro", con);    
-                cmd.CommandType = CommandType.StoredProcedure;    
+                string sqlQuery = "UPDATE libros SET nombre = '"+ Libro.nombre  +
+                "' ,paginas = "+ Libro.paginas+ 
+                " ,editorial = '"+ Libro.editorial+ 
+                "' ,autor = '"+ Libro.autor+ 
+                "' ,precio = "+ Libro.precio+ 
+                " WHERE id = " + Libro.id; 
+
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, con);     
     
-                cmd.Parameters.AddWithValue("@id", Libro.id);    
-                cmd.Parameters.AddWithValue("@nombre", Libro.nombre);    
-                cmd.Parameters.AddWithValue("@paginas", Libro.paginas);    
-                cmd.Parameters.AddWithValue("@editorial", Libro.editorial);    
-                cmd.Parameters.AddWithValue("@autor", Libro.autor); 
-                cmd.Parameters.AddWithValue("@precio", Libro.precio);   
     
                 con.Open();    
                 cmd.ExecuteNonQuery();    
@@ -87,7 +87,7 @@ namespace CRUD_LibrosVSC.Models
     
             using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                string sqlQuery = "SELECT * FROM Libros WHERE id= " + id;    
+                string sqlQuery = "SELECT * FROM libros WHERE id= " + id;    
                 MySqlCommand cmd = new MySqlCommand(sqlQuery, con);    
     
                 con.Open();    
@@ -112,10 +112,8 @@ namespace CRUD_LibrosVSC.Models
     
             using (MySqlConnection con = new MySqlConnection(connectionString))    
             {    
-                MySqlCommand cmd = new MySqlCommand("spBorrarLibro", con);    
-                cmd.CommandType = CommandType.StoredProcedure;    
-    
-                cmd.Parameters.AddWithValue("@id", id);    
+                string sqlQuery = "Delete FROM libros WHERE id= " + id; 
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, con);       
     
                 con.Open();    
                 cmd.ExecuteNonQuery();    

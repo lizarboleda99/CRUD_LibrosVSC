@@ -77,6 +77,7 @@ public IActionResult Delete(int? id)
     {  
         return NotFound();  
     }  
+    
     Libro libro = objlibro.TraerLibroPorId(id);  
   
     if (libro == null)  

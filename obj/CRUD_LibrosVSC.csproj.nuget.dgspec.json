@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {}
+    "D:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {}
   },
   "projects": {
-    "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {
+    "D:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
+        "projectUniqueName": "D:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
         "projectName": "CRUD_LibrosVSC",
-        "projectPath": "d:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
+        "projectPath": "D:\\GitHub\\CRUD_LibrosVSC\\CRUD_LibrosVSC.csproj",
         "packagesPath": "C:\\Users\\Liz\\.nuget\\packages\\",
-        "outputPath": "d:\\GitHub\\CRUD_LibrosVSC\\obj\\",
+        "outputPath": "D:\\GitHub\\CRUD_LibrosVSC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
